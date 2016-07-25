@@ -1,16 +1,34 @@
 package com.abc;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
+
+/**
+ * Created by Vlad Kostiuchenko on 7/24/16.
+ * E-mail: sadkou@gmail.com
+ * cell: 6467063785
+ */
 
 public class Transaction {
-    public final double amount;
-
-    private Date transactionDate;
+    private final double amount;
+    private final LocalDate transactionDate;
 
     public Transaction(double amount) {
         this.amount = amount;
-        this.transactionDate = DateProvider.getInstance().now();
+        this.transactionDate = LocalDate.now();
+    }
+
+    //For testing
+    public Transaction(double amount, LocalDate transactionDate) {
+        this.amount = amount;
+        this.transactionDate = transactionDate;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public LocalDate getDate() {
+        return transactionDate;
     }
 
 }
