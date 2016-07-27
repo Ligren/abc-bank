@@ -17,7 +17,7 @@ public class Checking extends Account{
     public static final String NAME = "Checking";
 
     @Override
-    public String getName() {
+    public synchronized String getName() {
         return NAME;
     }
 

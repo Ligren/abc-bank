@@ -23,11 +23,9 @@ public class Customer {
     private final List<Account> accounts = new ArrayList<>();
     public static NumberFormat NF = NumberFormat.getCurrencyInstance(Locale.US);
     public static DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ISO_DATE;
-//    private Bank bank;
 
     public Customer(String name) {
         this.name = name;
-//        this.bank = bank;
     }
 
     public String getName() {

@@ -24,7 +24,7 @@ public class Savings extends Account {
     }
 
     @Override
-    public double getInterestEarned() {
+    public synchronized double getInterestEarned() {
 
         List<Object[]> lst = getTransactions();
         double percentPerDayForFirstK = RATE_PER_MONTH_FOR_THE_FIRST_K / DAY_PER_MONTH;

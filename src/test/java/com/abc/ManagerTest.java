@@ -30,8 +30,6 @@ public class ManagerTest {
         Bank.cleanInstance();
     }
 
-
-
     @Test
     public void testGetTotalInterest() {
         Bank bank = Bank.getInstance();

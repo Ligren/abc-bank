@@ -29,7 +29,7 @@ public class MaxiSavings extends Account {
 // - if withdrawals was in past 10 days after deposit, so rate will be 0.1% from deposit date to next withdrawals date,
 // - if withdrawals was more then after 10 days after deposit so rate will be 5% from deposit date to next withdrawals date.
     @Override
-    public double getInterestEarned() {
+    public synchronized double getInterestEarned() {
 
         List<Object[]> lst = getTransactions();
         double percentPerDayWithdrawals = RATE_PER_MONTH_WITHDRAWALS / DAY_PER_MONTH;
